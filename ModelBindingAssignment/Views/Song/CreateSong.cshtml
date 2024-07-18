@@ -2,4 +2,27 @@
 @{
 	ViewData["Title"] = "Create a song";
 }
+
 <h1> Create a song </h1>
+
+<form method="post">
+	<label asp-for="Name">Song Name: </label>
+	<input asp-for="Name" />
+	<span asp-validation-for="Name"></span>
+
+	<label asp-for="Album">Album Name: </label>
+	<input asp-for="Album" />
+	<span asp-validation-for="Album"></span>
+
+	<label asp-for="Artist">Artist Name: </label>
+	<input asp-for="Artist" />
+	<span asp-validation-for="Artist"></span>
+
+	<label asp-for="Length">Song Length (minutes): </label>
+	<input asp-for="Length" />
+	<span asp-validation-for="Length"></span>
+
+	<input type="submit" value="Create Song"/>
+</form>
+
+
