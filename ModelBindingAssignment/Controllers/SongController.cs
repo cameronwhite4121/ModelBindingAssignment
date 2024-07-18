@@ -15,6 +15,7 @@ namespace ModelBindingAssignment.Controllers
 		{
 			if(ModelState.IsValid)
 			{
+				// Add valid song to database
 				return RedirectToAction("CreateSong");
 			}
 
