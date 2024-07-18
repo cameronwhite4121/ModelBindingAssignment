@@ -4,25 +4,38 @@
 }
 
 <h1> Create a song </h1>
+<div class="container-md">
+	<form method="post">
+		<div>
+			<label class="form-label" asp-for="Name">Song Name: </label>
+			<input class="form-control" asp-for="Name" />
+			<span class="text-warning" asp-validation-for="Name"></span>
+		</div>
+		
+		<div>
+			<label class="form-label" asp-for="Album">Album Name: </label>
+			<input class="form-control" asp-for="Album" />
+			<span class="text-warning" asp-validation-for="Album"></span>
+		</div>
+		
+		<div>
+			<label class="form-label" asp-for="Artist">Artist Name: </label>
+			<input class="form-control" asp-for="Artist" />
+			<span class="text-warning" asp-validation-for="Artist"></span>
+		</div>
+		
+		<div>
+			<label class="form-label" asp-for="Length">Song Length (minutes): </label>
+			<input class="form-control" asp-for="Length" />
+			<span class="text-warning" asp-validation-for="Length"></span>
+		</div>
+		
+		<br />
 
-<form method="post">
-	<label asp-for="Name">Song Name: </label>
-	<input asp-for="Name" />
-	<span asp-validation-for="Name"></span>
+		<input class="btn btn-outline-primary" type="submit" value="Create Song" />
+	</form>
+</div>
 
-	<label asp-for="Album">Album Name: </label>
-	<input asp-for="Album" />
-	<span asp-validation-for="Album"></span>
 
-	<label asp-for="Artist">Artist Name: </label>
-	<input asp-for="Artist" />
-	<span asp-validation-for="Artist"></span>
-
-	<label asp-for="Length">Song Length (minutes): </label>
-	<input type="number" asp-for="Length" />
-	<span asp-validation-for="Length"></span>
-
-	<input type="submit" value="Create Song"/>
-</form>
 
 
