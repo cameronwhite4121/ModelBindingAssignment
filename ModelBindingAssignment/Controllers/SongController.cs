@@ -10,5 +10,15 @@ namespace ModelBindingAssignment.Controllers
         {
             return View();
         }
+		[HttpPost]
+		public IActionResult CreateSong(Song s)
+		{
+			if(ModelState.IsValid)
+			{
+				return RedirectToAction("CreateSong");
+			}
+
+			return View();
+		}
 	}
 }

@@ -35,12 +35,8 @@ namespace ModelBindingAssignment.Models
 		/// Max value is 8400 or 140 hrs. Worlds longest song
 		/// is 138 hours long. That's a real fact.
 		/// </summary>
-		[Range(0, 8400)]
-		public double Length 
-		{
-			get { return Length; }
-			set { Length = Math.Round(value, 2); }
-		}
+		[Range(0, 8400, ErrorMessage = "Length can't be under 0")]
+		public double Length { get; set; }
 
 	}
 }
